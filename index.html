@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة المشروبات | Cafe Menu</title>
+    <style>
+        :root {
+            --bg-color: #0f0f11;
+            --surface-color: #1a1a1e;
+            --accent-color: #c5a880;
+            --text-primary: #f5f5f7;
+            --text-secondary: #9e9e9e;
+            --border-color: #2c2c32;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            padding: 20px 16px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header h1 {
+            font-size: 26px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 13px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+        }
+
+        .menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .menu-item {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .menu-item:active {
+            transform: scale(0.98);
+            border-color: var(--accent-color);
+        }
+
+        .item-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        .item-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .item-price-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .price-tag {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
+            background-color: var(--bg-color);
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .price-tag span {
+            font-size: 11px;
+            color: var(--text-secondary);
+            font-weight: normal;
+            margin-right: 3px;
+        }
+
+        .item-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            font-size: 12px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <div class="header">
+            <h1>الكافيه</h1>
+            <p>قائمة المشروبات الساخنة</p>
+        </div>
+
+        <h2 class="section-title">مشروبات ساخنة</h2>
+
+        <div class="menu-list">
+            <!-- أفوجاتو -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">أفوجاتو</span>
+                    <div class="item-price-box">
+                        <span class="price-tag">٦٠ <span>ج.م</span></span>
+                    </div>
+                </div>
+                <span class="item-desc">إسبرسو مركز مع آيس كريم فانيليا غني</span>
+            </div>
+
+            <!-- نسكافيه -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">نسكافيه</span>
+                    <div class="item-price-box">
+                        <span class="price-tag">٤٥ <span>ج.م</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- كابتشينو -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">كابتشينو</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٦٠</span>
+                        <span class="price-tag"><span>كبير:</span> ٩٠</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- كورتو -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">كورتو (كورتادو)</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٦٠</span>
+                        <span class="price-tag"><span>كبير:</span> ٩٠</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- لاتيه -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">لاتيه</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٦٠</span>
+                        <span class="price-tag"><span>كبير:</span> ٩٠</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- موكا -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">موكا</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٦٠</span>
+                        <span class="price-tag"><span>كبير:</span> ٩٠</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- سبانش لاتيه -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">سبانش لاتيه</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٩٠</span>
+                        <span class="price-tag"><span>كبير:</span> ١١٠</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- هوت شوكلت -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">هوت شوكلت</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٥٥</span>
+                        <span class="price-tag"><span>كبير:</span> ٧٥</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- هوت اوريو -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">هوت اوريو</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٦٠</span>
+                        <span class="price-tag"><span>كبير:</span> ٩٠</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- هوت سيدر -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">هوت سيدر</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٦٠</span>
+                        <span class="price-tag"><span>كبير:</span> ٨٠</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- فلات وايت -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">فلات وايت</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٦٠</span>
+                        <span class="price-tag"><span>كبير:</span> ٨٥</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- اميريكان كوفي -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">اميريكان كوفي</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٥٠</span>
+                        <span class="price-tag"><span>كبير:</span> ٧٠</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ماتشا -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">ماتشا</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٩٠</span>
+                        <span class="price-tag"><span>كبير:</span> ١١٠</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ماتشا لاتيه -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">ماتشا لاتيه</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٩٠</span>
+                        <span class="price-tag"><span>كبير:</span> ١٩٠</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- سحلب -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">سحلب</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٤٥</span>
+                        <span class="price-tag"><span>كبير:</span> ٦٥</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- سحلب نوتيلا -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">سحلب نوتيلا</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٥٥</span>
+                        <span class="price-tag"><span>كبير:</span> ٧٠</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- سحلب لوتس -->
+            <div class="menu-item">
+                <div class="item-main">
+                    <span class="item-name">سحلب لوتس</span>
+                    <div class="item-price-box">
+                        <span class="price-tag"><span>صغير:</span> ٥٥</span>
+                        <span class="price-tag"><span>كبير:</span> ٧٠</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>أهلاً بكم في كافيهنا • طورت بحب</p>
+        </div>
+    </div>
+
+</body>
+</html>
