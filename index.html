@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قائمة المشروبات | Cafe Menu</title>
+    <title>مَطْحَنُ فَيْرُوزْ | قائمة المشروبات</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bg-color: #0f0f11;
@@ -18,7 +22,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Cairo', Tahoma, Geneva, Verdana, sans-serif;
             -webkit-tap-highlight-color: transparent;
         }
 
@@ -39,28 +43,32 @@
         .header {
             text-align: center;
             margin-bottom: 35px;
-            padding: 20px 0;
+            padding: 25px 0;
             border-bottom: 1px solid var(--border-color);
         }
 
+        /* تعديل الاسم ليكون بخط الثلث العريض والمزخرف */
         .header h1 {
-            font-size: 26px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            color: var(--text-primary);
-            margin-bottom: 6px;
+            font-family: 'Amiri Quran', serif;
+            font-size: 42px; /* تكبير الخط ليكون عريض وضخم */
+            font-weight: 700;
+            color: var(--accent-color); /* جعل الاسم باللون الذهبي الفخم */
+            line-height: 1.2;
+            margin-bottom: 10px;
+            text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0;
         }
 
         .header p {
-            font-size: 13px;
-            color: var(--accent-color);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 14px;
+            color: var(--text-primary);
+            font-weight: 600;
+            letter-spacing: 1px;
         }
 
         .section-title {
             font-size: 18px;
-            font-weight: 500;
+            font-weight: 600;
             color: var(--accent-color);
             margin-bottom: 20px;
             padding-bottom: 6px;
@@ -146,14 +154,13 @@
 
     <div class="menu-container">
         <div class="header">
-            <h1>الكافيه</h1>
+            <h1>مَطْحَنُ فَيْرُوزْ</h1>
             <p>قائمة المشروبات الساخنة</p>
         </div>
 
         <h2 class="section-title">مشروبات ساخنة</h2>
 
         <div class="menu-list">
-            <!-- أفوجاتو -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">أفوجاتو</span>
@@ -164,7 +171,6 @@
                 <span class="item-desc">إسبرسو مركز مع آيس كريم فانيليا غني</span>
             </div>
 
-            <!-- نسكافيه -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">نسكافيه</span>
@@ -174,7 +180,6 @@
                 </div>
             </div>
 
-            <!-- كابتشينو -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">كابتشينو</span>
@@ -185,7 +190,6 @@
                 </div>
             </div>
 
-            <!-- كورتو -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">كورتو (كورتادو)</span>
@@ -196,7 +200,6 @@
                 </div>
             </div>
 
-            <!-- لاتيه -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">لاتيه</span>
@@ -207,7 +210,6 @@
                 </div>
             </div>
 
-            <!-- موكا -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">موكا</span>
@@ -218,7 +220,6 @@
                 </div>
             </div>
 
-            <!-- سبانش لاتيه -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">سبانش لاتيه</span>
@@ -229,7 +230,6 @@
                 </div>
             </div>
 
-            <!-- هوت شوكلت -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">هوت شوكلت</span>
@@ -240,7 +240,6 @@
                 </div>
             </div>
 
-            <!-- هوت اوريو -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">هوت اوريو</span>
@@ -251,7 +250,6 @@
                 </div>
             </div>
 
-            <!-- هوت سيدر -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">هوت سيدر</span>
@@ -262,7 +260,6 @@
                 </div>
             </div>
 
-            <!-- فلات وايت -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">فلات وايت</span>
@@ -273,7 +270,6 @@
                 </div>
             </div>
 
-            <!-- اميريكان كوفي -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">اميريكان كوفي</span>
@@ -284,7 +280,6 @@
                 </div>
             </div>
 
-            <!-- ماتشا -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">ماتشا</span>
@@ -295,7 +290,6 @@
                 </div>
             </div>
 
-            <!-- ماتشا لاتيه -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">ماتشا لاتيه</span>
@@ -306,7 +300,6 @@
                 </div>
             </div>
 
-            <!-- سحلب -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">سحلب</span>
@@ -317,7 +310,6 @@
                 </div>
             </div>
 
-            <!-- سحلب نوتيلا -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">سحلب نوتيلا</span>
@@ -328,7 +320,6 @@
                 </div>
             </div>
 
-            <!-- سحلب لوتس -->
             <div class="menu-item">
                 <div class="item-main">
                     <span class="item-name">سحلب لوتس</span>
@@ -342,7 +333,7 @@
         </div>
 
         <div class="footer">
-            <p>أهلاً بكم في كافيهنا • طورت بحب</p>
+            <p>أهلاً بكم في مَطْحَنِ فَيْرُوزْ • طُوِّرَ بِحُبّ</p>
         </div>
     </div>
 
